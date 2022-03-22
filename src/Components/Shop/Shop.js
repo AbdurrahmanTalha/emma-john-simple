@@ -4,6 +4,10 @@ import "./Shop.css"
 const Shop = () => {
     const [products, setProducts] = useState([])
     const [cart, setCart] = useState([]);
+    const [count, setCount] = useState(0)
+    count = count + 1;
+
+    console.log(count);
     useEffect(() => {
         fetch("products.json")
             .then(res => res.json())
